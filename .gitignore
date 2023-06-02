@@ -1,5 +1,9 @@
 BackEnd/HELP.md
-BackEnd/target/
+BackEnd/target/classes
+BackEnd/target/generated*
+BackEnd/target/maven*
+BackEnd/target/surefire*
+BackEnd/target/test-classes*
 BackEnd/!.mvn/wrapper/maven-wrapper.jar
 BackEnd/!**/src/main/**/target/
 BackEnd/!**/src/test/**/target/
