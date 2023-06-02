@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+
+  server:
+    restart : always
+    container_name: "server-pd"
+    ports:
+      - "8080:8080"
+    build:
+      context: "BackEnd"
+    networks:
+      - red-disign-patterns
+
+  mariadb:
+    restart : always
+    container_name: "mariadb-pd"
+    ports:
+      - "${PORT_BD}:3306"
+    volumes:
+      - "./mariadb/data:/var/lib/mysql"
+      - "./mariadb/database.sql:/docker-entrypoint-initdb.d/database.sql"
+    environment:
+      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+      - MARIADB_USER=${MARIADB_USER}
+      - MARIADB_PASSWORD=${MARIADB_PASSWORD}
+    image: 'mariadb:latest'
+    networks:
+      - red-disign-patterns
+
+networks:
+  red-disign-patterns:
+    driver: bridge
