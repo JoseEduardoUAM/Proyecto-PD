@@ -30,4 +30,5 @@ services:
 
 networks:
   red-disign-patterns:
-    driver: bridge
+    name: servidor-nginx_red-disign-patterns
+    external: true
