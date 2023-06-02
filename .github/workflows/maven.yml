@@ -1,0 +1,19 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Proceso de Compilacion
+      run: docker-compose build
+    - name: Creacion de Instancias
+      run: docker-compose up -d
