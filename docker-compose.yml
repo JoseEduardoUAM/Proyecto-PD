@@ -16,7 +16,7 @@ services:
     restart : always
     container_name: "mariadb-pd"
     ports:
-      - "3320:3306"
+      - "${MARIADB_PORT}:3306"
     volumes:
       - "./mariadb/data:/var/lib/mysql"
       - "./mariadb/database.sql:/docker-entrypoint-initdb.d/database.sql"
