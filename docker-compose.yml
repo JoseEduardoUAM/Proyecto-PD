@@ -16,14 +16,14 @@ services:
     restart : always
     container_name: "mariadb-pd"
     ports:
-      - "${MARIADB_PORT}:3306"
+      - "3320:3306"
     volumes:
       - "./mariadb/data:/var/lib/mysql"
       - "./mariadb/database.sql:/docker-entrypoint-initdb.d/database.sql"
     environment:
-      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
-      - MARIADB_USER=${MARIADB_USER}
-      - MARIADB_PASSWORD=${MARIADB_PASSWORD}
+      - MARIADB_ROOT_PASSWORD=secret_root_?2172
+      - MARIADB_USER=Administrador
+      - MARIADB_PASSWORD=secret_administrador_?2172
     image: 'mariadb:latest'
     networks:
       - red-disign-patterns
