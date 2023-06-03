@@ -1,6 +1,7 @@
 package com.BackEnd;
 
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.ClassDTO.Inventory;
 import com.ClassProxy.InventoryProxy;
