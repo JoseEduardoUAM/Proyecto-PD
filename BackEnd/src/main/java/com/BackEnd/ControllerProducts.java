@@ -14,36 +14,42 @@ import java.util.ArrayList;
 @RestController
 public class ControllerProducts {
   
+  @CrossOrigin(origins = "*")
   @PostMapping("/getProductsAll")
   public ArrayList<Product> getProductsAll() {
     ProductProxy pp = ProductProxy.get();
     return pp.getProductsAll();
 	}
 
+  @CrossOrigin(origins = "*")
   @PostMapping("/getSmarphones")
   public ArrayList<Product> getSmartphones() {
     ProductProxy pp = ProductProxy.get();
     return pp.getSmartphones();
 	}
 
+  @CrossOrigin(origins = "*")
   @PostMapping("/getSmartwatch")
   public ArrayList<Product> getSmartwatch() {
     ProductProxy pp = ProductProxy.get();
     return pp.getSmartWatch();
 	}
 
+  @CrossOrigin(origins = "*")
   @PostMapping("/getTablets")
   public ArrayList<Product> getTablets() {
     ProductProxy pp = ProductProxy.get();
     return pp.getTablets();
 	}
 
+  @CrossOrigin(origins = "*")
   @PostMapping("/getSmartTV")
   public ArrayList<Product> getSmartTV() {
     ProductProxy pp = ProductProxy.get();
     return pp.getSmartTV();
 	}
 
+  @CrossOrigin(origins = "*")
   @PostMapping("/addProducts")
   public ResponseMessage addProduct( 
     @RequestBody Smartphone product

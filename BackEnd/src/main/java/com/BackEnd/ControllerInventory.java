@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @RestController
 public class ControllerInventory {
   
+  @CrossOrigin(origins = "*")
   @PostMapping("/getInventoryAll")
   public ArrayList<Inventory> getInventoryAll() {
     InventoryProxy ip = InventoryProxy.get();

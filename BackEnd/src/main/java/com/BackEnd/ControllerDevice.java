@@ -20,18 +20,21 @@ public class ControllerDevice {
     return dp.getSensors();
 	}
 
+  @CrossOrigin(origins = "*")
   @PostMapping("/getScreen")
   public ArrayList<Screen> getScreens() {
     DeviceProxy dp = DeviceProxy.get();
     return dp.getScreens();
 	}
 
+  @CrossOrigin(origins = "*")
   @PostMapping("/getProcessors")
   public ArrayList<Processor> getProcessors() {
     DeviceProxy dp = DeviceProxy.get();
     return dp.getProcessors();
 	}
   
+  @CrossOrigin(origins = "*")
   @PostMapping("/getModels")
   public ArrayList<Model> getModels() {
     DeviceProxy dp = DeviceProxy.get();
