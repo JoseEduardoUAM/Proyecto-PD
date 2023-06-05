@@ -1,5 +1,7 @@
 package com.ClassAbstract;
 
+import com.ConcreteClass.*;
+
 public abstract class Product {
     
     private final int id;

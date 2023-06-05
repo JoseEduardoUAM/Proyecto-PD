@@ -1,4 +1,4 @@
-package com.ClassAbstract;
+package com.ConcreteClass;
 
 public class Processor {
 
